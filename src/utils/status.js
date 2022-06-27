@@ -43,7 +43,7 @@ export const getMintStatus = async (data) => {
 
         var isPublic = false;
         try {
-            isPublic = await contract.methods.isPublicSaleOn().call((err, result) => {
+            isPublic = await contract.methods._isPublicMintEnabled().call((err, result) => {
                 if (err) {
                     return false;
                 }

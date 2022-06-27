@@ -24,7 +24,7 @@ const formatMintTransaction = async (data) => {
     mintType = data.state.mintType;
   }
   if (mintType === "public") {
-    extraData = await contract.methods.mint(count);
+    extraData = await contract.methods.publicMint();
   } else {
     throw new Error("Sales is not start yet.");
   }
